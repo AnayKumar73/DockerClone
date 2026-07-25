@@ -21,10 +21,3 @@ echo "+cpu +memory +pids" > /sys/fs/cgroup/cgroup.subtree_control
 
 cat /sys/fs/cgroup/cgroup.controllers
 ls /sys/fs/cgroup/
-
-
-
-# MUST COMPILE TESTS AS SUCH: gcc -static test.c -o test
-
-# Run as:
-./[executable name] run ./[test executable name]
