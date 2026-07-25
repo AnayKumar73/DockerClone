@@ -1,11 +1,11 @@
-## Run in dev container for safety as such: 
+# First start dev container for safety as such: 
 
 docker run -it --privileged --cgroupns=private -v $(pwd):/src ubuntu:24.04 bash
 
 It is ironic to run this project inside another container, but that gets at the point of containerization in general, because we want to ensure our pivot_roots and rewriting of cgroups are fully isolated and non-interferring with our host machine, in the event of bugs
 
 
-## The following needs to be done to allow cgroup setup, by initializing child cgroup first
+# The following needs to be done to allow cgroup setup, by initializing child cgroup first:
 
 
 
@@ -24,6 +24,7 @@ ls /sys/fs/cgroup/
 
 
 
-## MUST COMPILE TESTS AS SUCH: gcc -static test.c -o test
+# MUST COMPILE TESTS AS SUCH: gcc -static test.c -o test
 
-Need -static flag
+#Run as:
+./[executable name] run ./[test executable name]
