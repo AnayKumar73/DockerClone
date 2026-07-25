@@ -26,5 +26,5 @@ ls /sys/fs/cgroup/
 
 # MUST COMPILE TESTS AS SUCH: gcc -static test.c -o test
 
-#Run as:
+# Run as:
 ./[executable name] run ./[test executable name]
