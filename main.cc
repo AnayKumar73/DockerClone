@@ -67,10 +67,8 @@ int main_container(void* arg) {
     std::string binary_path{(char*)arg};
     std::string binary_name{std::filesystem::path(binary_path).filename().string()};
     std::string dest = container_path + "/" + binary_name;
-    std::filesystem::copy_file(binary_path, dest,
-        std::filesystem::copy_options::overwrite_existing);
-    std::filesystem::permissions(dest, std::filesystem::perms::owner_exec,
-        std::filesystem::perm_options::add);
+    std::filesystem::copy_file(binary_path, dest, std::filesystem::copy_options::overwrite_existing);
+    std::filesystem::permissions(dest, std::filesystem::perms::owner_exec, std::filesystem::perm_options::add);
     
     
     std::cout << "Container initialized. Inside as: " << getpid() << "\n";
